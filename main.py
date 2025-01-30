@@ -21,7 +21,7 @@ def simulate_red_light_green_light(num_players):
             players.remove(eliminated)
             print(f"{eliminated} has been eliminated.")
         print("Green Light!")
-        time.sleep(0.5)  # Wait for 0.5 seconds before the next round
+        time.sleep(4)  # Wait for 4 seconds before the next round
     print(f"{players[0]} is the winner!")
 
 if __name__ == "__main__":
