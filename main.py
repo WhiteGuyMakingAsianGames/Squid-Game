@@ -2,7 +2,8 @@ import random
 import time
 import logging
 
-logging.basicConfig(level=logging.INFO, format='%(message)s')
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class Player:
     """
@@ -23,6 +24,7 @@ def simulate_red_light_green_light(num_players, move_probability=0.5, wait_time=
     :param wait_time: Time to wait between phases in seconds.
     """
     players = [Player(i) for i in range(1, num_players + 1)]
+    
     while len(players) > 1:
         logging.info("Red Light!")
         eliminated_players = [player for player in players if random.random() < move_probability]
